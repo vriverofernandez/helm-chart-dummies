@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+  namespace: test
+data:
+  color: {{ .Values.propiedades.color | upper }}
+  altura: {{ .Values.propiedades.altura | quote }}
